@@ -1,0 +1,84 @@
+{
+  "name": "email",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "to": {
+      "type": "string",
+      "required": true
+    },
+    "from": {
+      "type": "string",
+      "required": true
+    },
+    "subject": {
+      "type": "string",
+      "required": true
+    },
+    "text": {
+      "type": "string",
+      "required": true
+    },
+    "html": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {
+    "prototype.sendemail": {
+      "accepts": [
+        {
+          "arg": "to",
+          "type": "string",
+          "required": true,
+          "description": "email to"
+        },
+        {
+          "arg": "from",
+          "type": "string",
+          "required": true,
+          "description": "email from"
+        },
+        {
+          "arg": "subject",
+          "type": "string",
+          "required": true,
+          "description": "email subject"
+        },
+        {
+          "arg": "text",
+          "type": "string",
+          "required": true,
+          "description": "email text"
+        },
+        {
+          "arg": "html",
+          "type": "string",
+          "required": true,
+          "description": "email html"
+        }
+      ],
+      "returns": [
+        {
+          "arg": "result",
+          "type": "object",
+          "root": true,
+          "description": "email result"
+        }
+      ],
+      "description": "send email",
+      "http": [
+        {
+          "path": "/sendemail",
+          "verb": "post"
+        }
+      ]
+    }
+  }
+}

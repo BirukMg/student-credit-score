@@ -1,0 +1,42 @@
+{
+  "name": "cmem",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "sid": {
+      "type": "string",
+      "required": true
+    },
+    "cid": {
+      "type": "string",
+      "required": true
+    },
+    "ccategory": {
+      "type": "string",
+      "required": true
+    },
+    "fullname": {
+      "type": "string",
+      "required": true
+    },
+    "activity": {
+      "type": "object",
+      "required": true
+    },
+    "level": {
+      "type": "string",
+      "required": true
+    },
+    "mid": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

@@ -1,0 +1,59 @@
+{
+  "name": "student",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "student_id": {
+      "type": "string",
+      "required": true
+    },
+    "address": {
+      "type": "string",
+      "required": true
+    },
+    "emrgency_call": {
+      "type": "string",
+      "required": true
+    },
+    "school_id": {
+      "type": "string",
+      "required": true
+    },
+    "login_id": {
+      "type": "string",
+      "required": true
+    },
+    "section": {
+      "type": "string",
+      "required": true
+    },
+    "level": {
+      "type": "string",
+      "required": true
+    },
+    "password": {
+      "type": "string",
+      "required": true
+    },
+    "startedYear": {
+      "type": "number",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "classActivities": {
+      "type": "hasMany",
+      "model": "classActivity",
+      "foreignKey": "studentId",
+      "options": {
+        "nestRemoting": true
+      }
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

@@ -1,0 +1,62 @@
+{
+  "name": "classActivity",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "year": {
+      "type": "number",
+      "required": true
+    },
+    "semister": {
+      "type": "number",
+      "required": true
+    },
+    "homework": {
+      "type": "number",
+      "default": 0
+    },
+    "classwork": {
+      "type": "number",
+      "default": 0
+    },
+    "assignment": {
+      "type": "number",
+      "default": 0
+    },
+    "participation": {
+      "type": "number",
+      "default": 0
+    },
+    "conduct": {
+      "type": "number",
+      "default": 0
+    },
+    "student_uniqueid": {
+      "type": "string"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "student": {
+      "type": "belongsTo",
+      "model": "student",
+      "foreignKey": "studentId",
+      "options": {
+        "nestRemoting": true
+      }
+    },
+    "teacher": {
+      "type": "belongsTo",
+      "model": "teacher",
+      "foreignKey": "teacherId",
+      "options": {
+        "nestRemoting": true
+      }
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

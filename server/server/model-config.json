@@ -1,0 +1,102 @@
+{
+  "_meta": {
+    "sources": [
+      "loopback/common/models",
+      "loopback/server/models",
+      "../common/models",
+      "./models"
+    ],
+    "mixins": [
+      "loopback/common/mixins",
+      "loopback/server/mixins",
+      "../common/mixins",
+      "./mixins"
+    ]
+  },
+  "User": {
+    "dataSource": "db"
+  },
+  "AccessToken": {
+    "dataSource": "db",
+    "public": false
+  },
+  "ACL": {
+    "dataSource": "db",
+    "public": false
+  },
+  "RoleMapping": {
+    "dataSource": "db",
+    "public": false,
+    "options": {
+      "strictObjectIDCoercion": true
+    }
+  },
+  "Role": {
+    "dataSource": "db",
+    "public": false
+  },
+  "login": {
+    "dataSource": "mongod",
+    "public": true
+  },
+  "role": {
+    "dataSource": "mongod",
+    "public": true
+  },
+  "requests": {
+    "dataSource": "mongod",
+    "public": true
+  },
+  "email": {
+    "dataSource": "mongod",
+    "public": true
+  },
+  "school": {
+    "dataSource": "mongod",
+    "public": true
+  },
+  "log": {
+    "dataSource": "mongod",
+    "public": true
+  },
+  "teacher": {
+    "dataSource": "mongod",
+    "public": true
+  },
+  "cl": {
+    "dataSource": "mongod",
+    "public": true
+  },
+  "schoolClub": {
+    "dataSource": "mongod",
+    "public": true
+  },
+  "student": {
+    "dataSource": "mongod",
+    "public": true
+  },
+  "classActivity": {
+    "dataSource": "mongod",
+    "public": true
+  },
+  "club": {
+    "dataSource": "mongod",
+    "public": true
+  },
+  "now": {
+    "dataSource": "mongod",
+    "public": true
+  },
+  "cmem": {
+    "dataSource": "mongod",
+    "public": true
+  },
+  "category": {
+    "dataSource": "mongod",
+    "public": true
+  },
+  "transfer_request": {
+    "dataSource": "mongod",
+    "public": true
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "name": "transfer_request",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "senderId": {
+      "type": "string",
+      "required": true
+    },
+    "senderName": {
+      "type": "string",
+      "required": true
+    },
+    "recieverName": {
+      "type": "string",
+      "required": true
+    },
+    "recieverId": {
+      "type": "string",
+      "required": true
+    },
+    "studentId": {
+      "type": "string",
+      "required": true
+    },
+    "sid": {
+      "type": "string",
+      "required": true
+    },
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "level": {
+      "type": "string"
+    },
+    "status": {
+      "type": "object",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

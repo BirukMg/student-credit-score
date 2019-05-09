@@ -1,0 +1,32 @@
+{
+  "name": "schoolClub",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "activities": {
+      "type": [
+        "string"
+      ],
+      "required": true
+    },
+    "login_id": {
+      "type": "string",
+      "required": true
+    },
+    "school_id": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}
