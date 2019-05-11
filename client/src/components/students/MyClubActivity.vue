@@ -71,15 +71,11 @@
         }
         axios.get("http://localhost:3000/api/students?filter="+ JSON.stringify(filterClub))
         .then(studentRes => {
-          // console.log(studentRes.data[0].student_id);
           axios.get('http://localhost:3000/api/categories')
           .then(categoryRes => {
             var arry = []
             var obj = {}
-            // console.log(categoryRes);
-            // this.categories = categoryRes.data[0].category
             for (var i = 0; i < categoryRes.data[0].category.length; i++) {
-              // console.log(categoryRes.data[0].category[i]);
               let filterActivity = {
                 where : {
                   sid: studentRes.data[0].student_id,
@@ -88,14 +84,11 @@
               }
               axios.get("http://localhost:3000/api/cmems?filter="+ JSON.stringify(filterActivity))
               .then(cmemRes => {
-                // console.log(cmemRes);
                 arry = []
                   if (cmemRes.data.length != 0) {
                     for (var i = 0; i < cmemRes.data.length; i++) {
-                      // activityArr.push(cmemRes.data[0].activity)
                       for (var variable in cmemRes.data[i].activity) {
                         if (cmemRes.data[i].activity.hasOwnProperty(variable)) {
-                          // console.log(cmemRes.data[0].activity[variable]);
                           arry.push(cmemRes.data[i].activity[variable])
                         }
                       }

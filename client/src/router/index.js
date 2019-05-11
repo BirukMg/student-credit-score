@@ -26,6 +26,7 @@ import MyClassActivity from '@/components/students/MyClassActivity'
 import MyClubActivity from '@/components/students/MyClubActivity'
 import ClubsInSchool from '@/components/students/ClubsInSchool'
 import StudentProfile from '@/components/students/Profile'
+import StudentScore from '@/components/students/StudentScore'
 
 
 Vue.use(Router)
@@ -51,6 +52,11 @@ export default new Router({
       path: '/schoolReg',
       name: 'Register',
       component: Register
+    },
+    {
+      path: '/score/:student_id',
+      name: 'StudentScore',
+      component: StudentScore
     },
     {
       path: '/superAdmin',
